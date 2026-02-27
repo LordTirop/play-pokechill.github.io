@@ -1598,3 +1598,18 @@ Game Guide
 </body>
 </html>
 
+// ===== MODE SANDBOX LOCAL =====
+window.devMode = true;
+
+window.devGiveMoney = function(amount) {
+    if (!window.devMode) return;
+    saved.money += amount;
+    console.log("Argent ajouté :", amount);
+};
+
+window.devMaxLevel = function() {
+    if (!window.devMode) return;
+    saved.player.level = 100;
+    console.log("Niveau max !");
+};
+
